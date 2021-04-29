@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    {# Custom CSS#}
+    <link rel="stylesheet" href="{% static 'css/project.css' %}">
+    {# FONT #}
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <title>Breast Cancer Prediction</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+      <div class="container-fluid">
+      <div class="navbar-header">
+        <a  class='navbar-brand bigbrand' href="{% url 'Homepage' %}">Welcome!</a>
+      </div>
+
+      <ul class='nav navbar-nav'>
+        <li><a class="navbar-link" href="{% url 'prediction' %}">Predictor Area</a></li>
+        <li><a class="navbar-link" href="{% url 'About' %}">About Dataset</a></li>
+      </ul>
+    </div>
+    </nav>
+
+
+    <div class="container">
+      <div class="jumbotron">
+        <u><h2><b>Overview</b></h2></u> <br><br>
+        <div class="row">
+          <div class="col-lg-4 col-xs-6 thumbnail"><img align='center' src="{% static "images/breastcancer.jpg" %}" alt=''></div>
+          <div class="col-lg-4 col-xs-6 thumbnail"><img align='center' src="{% static "images/download.jpg" %}" alt=''></div>
+          <div class="col-lg-4 col-xs-6 thumbnail"><img align='center' src="{% static "images/hope.jpg" %}" alt=''></div>
+        </div>
+        <p>
+<b>Breast cancer</b> is the uncontrollable growth of malignant cells in the breasts. It’s the most common cancer in women, although it can also develop in men.
+
+The exact cause of breast cancer is unknown, but some women have a higher risk than others. This includes women with a personal or family history of breast cancer and women with certain gene mutations.<br><br>
+
+You also have an increased risk of breast cancer if you began your menstrual cycle before the age of 12, started menopause at an older age, or have never been pregnant.<br><br>
+
+Diagnosing and treating breast cancer early offers the best treatment outlook. It’s important to examine your breasts regularly and schedule regular mammograms.
+
+<br><br>Talk to your doctor about which breast cancer screening schedule would be best for you.
+
+Since cancer cells can metastasize, or spread to other parts of the body, it’s important to recognize the symptoms of breast cancer early on. The sooner you receive a diagnosis and start treatment, the better your outlook. </p>
+      </div>
+    </div>
+    <div class="container">
+
+    <u><h2 style="color:black">Some Pictures</h2></u><br><br>
+      <div class="row">
+                <div class="col-lg-3 col-xs-6 thumbnail"><img  src="{% static "images/quote3.jpg" %}" alt=""></div>
+                <div class="col-lg-3 col-xs-6 thumbnail"><img  src="{% static "images/cancer3.jpg" %}" alt=""></div>
+                <div class="col-lg-3 col-xs-6 thumbnail"><img  src="{% static "images/unsplash1.jpg" %}" alt=""></div>
+                <div class="col-lg-3 col-xs-6 thumbnail"><img  src="{% static "images/doctor1.jpg" %}" alt=""></div><br>
+      </div>
+
+
+      <div class="col-lg-3 col-xs-6 thumbnail"><img  src="{% static "images/quote.jpg" %}" alt=""></div>
+      <div class="col-lg-3 col-xs-6 thumbnail"><img  src="{% static "images/cancer2.jpg" %}" alt=""></div>
+      <div class="col-lg-3 col-xs-6 thumbnail"><img  src="{% static "images/cancer4.jpg" %}" alt=""></div>
+      <div class="col-lg-3 col-xs-6 thumbnail"><img  src="{% static "images/cancer5.jpg" %}" alt=""></div>
+
+
+
+    </div>
+  </body>
+</html>

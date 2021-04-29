@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    {# Custom CSS#}
+    <link rel="stylesheet" href="{% static 'css/project.css' %}">
+    {# FONT #}
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+
+
+
+    <title>Cancer Predictor Zone</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+      <div class="container-fluid">
+      <div class="navbar-header">
+        <a  class='navbar-brand bigbrand' href="{% url 'Homepage' %}">Welcome!</a>
+      </div>
+
+      <ul class='nav navbar-nav'>
+        <li><a class="navbar-link" href="{% url 'prediction' %}">Predictor Area</a></li>
+        <li><a class="navbar-link" href="{% url 'About' %}">About Dataset</a></li>
+      </ul>
+    </div>
+    </nav>
+
+    <div class="container">
+      <div class="jumbotron">
+
+        <br><br>
+      <b><u><p align='center' style="font-size:35px"> Breast Cancer Predictor Zone</p></u></b>
+      <br><br><br>
+      <h3><b>*Note: All the fields are mandatory for the prediction & all the values should be in numerical format (i.e. Decimal numbers)
+      </b></h3><br><br>
+    <form method="post" enctype="multipart/form-data" action="{% url 'result' %}">
+      {% csrf_token %}
+        <div class="form-group">
+          <font size="4" color='black'>
+
+   <label style="font-size:20px" color='black' for="concave_mean">Concave Points Mean</label>
+  <input type="text" class="form-control" id="concave_mean" name="concave_mean"  placeholder="Enter the values in numeric format"  required> &nbsp;<br><br>
+
+
+   <label for="area_worst">Area Worst</label>
+  <input type="text" class="form-control" id="area_worst" name="area_worst"  placeholder="Enter the values in numeric format"   required><br><br>
+
+  <label style="font-size:20px" color='black' for="concave_worst">Concave Points Worst</label>
+  <input type="text" class="form-control" id="concave_worst" name="concave_worst"  placeholder="Enter the values in numeric format"  required><br><br>
+
+  <label style="font-size:20px" color='black' for="radius_mean">Radius Mean</label>
+  <input type="text" class="form-control" id="radius_mean" name="radius_mean"   placeholder="Enter the values in numeric format"  required><br><br>
+
+
+  <label style="font-size:20px" color='black' for="radius_worst">Radius Worst</label>
+  <input type="text" class="form-control" id="radius_worst" name="radius_worst"  placeholder="Enter the values in numeric format"  required><br><br>
+
+
+
+  <label style="font-size:20px" color='black' for="peri_worst">Perimeter Worst</label>
+  <input type="text" class="form-control" id="peri_worst" name="peri_worst"   placeholder="Enter the values in numeric format"  required><br><br>
+
+
+  <label style="font-size:20px" color='black' for="area_se">Area se</label>
+  <input type="text" class="form-control" id="area_se" name="area_se"   placeholder="Enter the values in numeric format"  required><br><br>
+
+
+  <label style="font-size:20px" color='black' for="peri_mean">Perimeter Mean</label>
+  <input type="text" class="form-control" id="area_mean" name="peri_mean"  placeholder="Enter the values in numeric format"  required><br><br>
+
+
+  <label style="font-size:20px" color='black' for="concavity_mean">Concavity Mean</label>
+  <input type="text" class="form-control" id="concavity_mean" name="concavity_mean"  placeholder="Enter the values in numeric format"  required><br><br>
+
+
+  <label style="font-size:20px" color='black' for="concavity_worst">Concavity Worst</label>
+  <input type="text" class="form-control" id="concavity_worst" name="concavity_worst" placeholder="Enter the values in numeric format"  required><br><br>
+
+  <input type="submit" class="btn btn-success btn-lg btn-block" name="button" value="Predict">
+<br><br>
+  <!-- <input type="submit" name="button" class="btn btn-primary btn-lg btn-block" value="Submit"> -->
+</form>
+  </div>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    {# Custom CSS#}
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/project.css' %}">
+    {# FONT #}
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+
+
+    <style>
+        h1{text-align: center;}
+        h2{text-align: center;}
+        p{text-align: center;}
+        h3{text-align: center;}
+    </style>
+
+    <title>Result</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+      <div class="container-fluid">
+      <div class="navbar-header">
+        <a  class='navbar-brand bigbrand' href="{% url 'Homepage' %}">Welcome!</a>
+      </div>
+
+      <ul class='nav navbar-nav'>
+        <li><a class="navbar-link" href="{% url 'prediction' %}">Predictor Area</a></li>
+        <li><a class="navbar-link" href="{% url 'About' %}">About Dataset</a></li>
+      </ul>
+    </div>
+    </nav>
+
+    <div class="container">
+      <div class="jumbotron">
+        <br><br><br>
+          {% if result1 == 1 %}
+
+          <h1><b>Your Result: You are diagnosed with Breast Cancer & it is Malignant!</b></h1><br>
+
+        <p><a href="https://www.medlife.com/blog/10-best-cancer-hospitals-in-india/" target="_blank"> Click Here to see the Best Hospitals for Cancer Treatment.</a></p>
+
+<br><br>
+
+          <h2>Try to maintain a healthy lifestyle & Go for the Regular checkups to prevent the cancer!</h2>
+          <h3>All the Best!</h3><br><br>
+          <div class="container">
+            <div class="row">
+                      <div class="col-lg-4 col-xs-6 thumbnail"><img  src="{% static "images/health1.jpg" %}" alt=""></div>
+                      <div class="col-lg-4 col-xs-6 thumbnail"><img  src="{% static "images/health2.jpg" %}" alt=""></div>
+                      <div class="col-lg-4 col-xs-6 thumbnail"><img  src="{% static "images/health3.jpg" %}" alt=""></div>
+                      <div class="col-lg-4 col-xs-6 thumbnail"><img  src="{% static "images/health4.jpg" %}" alt=""></div>
+                      <div class="col-lg-4 col-xs-6 thumbnail"><img  src="{% static "images/health5.jpg" %}" alt=""></div>
+                      <div class="col-lg-4 col-xs-6 thumbnail"><img  src="{% static "images/health6.jpg" %}" alt=""></div>
+          </div>
+
+
+          {% else %}
+
+       <h1><b>Your Results: You are Absolutely Fine & it is Benign!</b></h1><br>
+          <h2>Try to maintain a healthy lifestyle & Go for the Regular checkups to prevent the cancer!</h2>
+          <h3>All the Best!</h3><br><br>
+          <div class="container">
+            <div class="row">
+                      <div class="col-lg-4 col-xs-6 thumbnail"><img  src="{% static "images/health1.jpg" %}" alt=""></div>
+                      <div class="col-lg-4 col-xs-6 thumbnail"><img  src="{% static "images/health2.jpg" %}" alt=""></div>
+                      <div class="col-lg-4 col-xs-6 thumbnail"><img  src="{% static "images/health3.jpg" %}" alt=""></div>
+                      <div class="col-lg-4 col-xs-6 thumbnail"><img  src="{% static "images/health4.jpg" %}" alt=""></div>
+                      <div class="col-lg-4 col-xs-6 thumbnail"><img  src="{% static "images/health5.jpg" %}" alt=""></div>
+                      <div class="col-lg-4 col-xs-6 thumbnail"><img  src="{% static "images/health6.jpg" %}" alt=""></div>
+          </div>
+
+
+          {% endif %}
+              </div>
+              <div class="wrapper">
+                <h3><emp>&copy; PROJECT MADE BY: MALLA REDDY VINAYAK RAO</pre></emp><br><br><br>
+                      <a href="https://github.com/vr-vinayak/Breast-Cancer-Prediction" target="_blank"><i class="fab fa-github fa-2x" aria-hidden="true"></i></a>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+                      <a href="https://www.linkedin.com/in/mallareddy-vinayak-rao-34454a154/" target="_blank"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i></a>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+                      <a href="https://www.instagram.com/vr_vinayak/" target="_blank"><i class="fab fa-instagram fa-2x" aria-hidden="true"></i></a>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+
+              </div>
+            </div>
+          </div>
+      </div>
+
+
+
+
+    </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    {# Custom CSS#}
+    <link rel="stylesheet" href="{% static 'css/project.css' %}">
+    {# FONT #}
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+
+
+    <title>About Project</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+      <div class="container-fluid">
+      <div class="navbar-header">
+        <a  class='navbar-brand bigbrand' href="{% url 'Homepage' %}">Welcome!</a>
+      </div>
+
+      <ul class='nav navbar-nav'>
+        <li><a class="navbar-link" href="{% url 'prediction' %}">Predictor Area</a></li>
+        <li><a class="navbar-link" href="{% url 'About' %}">About Dataset</a></li>
+      </ul>
+    </div>
+    </nav>
+
+    <div class="container">
+      <div class="jumbotron">
+        <h1><b>About Breast Cancer Prediction Project Dataset</b></h1>
+        <b><hr></b>
+
+        <h2><b>Features are computed from a digitized image of a fine needle aspirate (FNA) of a breast mass. They describe characteristics of the cell nuclei present in the image.
+n the 3-dimensional space is that described in: [K. P. Bennett and O. L. Mangasarian: "Robust Linear Programming Discrimination of Two Linearly Inseparable Sets", Optimization Methods and Software 1, 1992, 23-34].<br><br>
+
+This database is also available through the UW CS ftp server:
+ftp ftp.cs.wisc.edu
+cd math-prog/cpo-dataset/machine-learn/WDBC/<br><br>
+
+<h3><a href="https://www.kaggle.com/uciml/breast-cancer-wisconsin-data" target="_blank">Link to see the Breast Cancer Dataset.</a> </h3>
+<br><br>
+Also can be found on UCI Machine Learning Repository: https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29 <br><br>
+
+Attribute Information: <br><br>
+
+1) ID number <br>
+2) Diagnosis (M = malignant, B = benign)
+3-32)<br><br>
+
+Ten real-valued features are computed for each cell nucleus:<br><br>
+
+a) radius (mean of distances from center to points on the perimeter)<br>
+b) texture (standard deviation of gray-scale values)<br>
+c) perimeter <br>
+d) area <br>
+e) smoothness (local variation in radius lengths) <br>
+f) compactness (perimeter^2 / area - 1.0) <br>
+g) concavity (severity of concave portions of the contour) <br>
+h) concave points (number of concave portions of the contour) <br>
+i) symmetry <br>
+j) fractal dimension ("coastline approximation" - 1)<br><br>
+
+The mean, standard error and "worst" or largest (mean of the three
+largest values) of these features were computed for each image,
+resulting in 30 features. <br>For instance, field 3 is Mean Radius, field
+13 is Radius SE, field 23 is Worst Radius.<br><br>
+
+All feature values are recoded with four significant digits.<br><br>
+
+Missing attribute values: none <br><br>
+
+Class distribution: 357 benign, 212 malignant.
+
+</b></h2>
+      </body>
+      </html>
